@@ -2,114 +2,243 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>د. انجي نصرة | عناية بالبشرة</title>
-<meta name="description" content="منتجات عناية بالبشرة من تركيبة د. انجي نصرة، طبيبة التجميل.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Anji Skincare | د. انجي نصرة</title>
+<meta name="description" content="Dr. Anji Skincare: مستحضرات عناية بالبشرة، استشارات وتحليل بشرة، وجلسات تخصصية مع د. انجي نصرة.">
+<meta property="og:title" content="Dr. Anji Skincare | د. انجي نصرة">
+<meta property="og:description" content="مستحضرات عناية بالبشرة واستشارات وجلسات تخصصية.">
+<meta property="og:image" content="https://dranjinasra.github.io/hero.jpg">
+<meta name="theme-color" content="#fbe3ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2d1a23" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 <script>
-/* ===== عدّلي هون فقط ===== */
-const WHATSAPP = "9627XXXXXXXX";   /* رقمك مع رمز الدولة بدون + أو أصفار */
-const INSTAGRAM = "yourpage";      /* اسم حساب الانستا بدون @ */
-/* لكل منتج: [رمز, الاسم, نوع البشرة, تصنيف, وصف, [ميزة1, ميزة2]]
-   أنواع البشرة: dry جافة | oil دهنية | sens حساسة (ممكن أكثر من نوع بمسافة) */
-const PRODUCTS = [
-["🧴","غسول لطيف","dry sens","غسول يومي","ينظف بعمق دون جفاف أو شد.",["خالٍ من الكبريتات","مناسب للصباح والمساء"]],
-["💧","سيروم الترطيب","dry sens","سيروم","ترطيب مكثف ونضارة تدوم.",["حمض الهيالورونيك","يمتص بسرعة"]],
-["🌿","جل التوازن","oil","جل خفيف","ينظم لمعان البشرة الدهنية.",["قوام مائي","لا يسد المسام"]],
-["✨","كريم الليل","dry","كريم مغذٍّ","تغذية وتجديد أثناء النوم.",["غني ومريح","يدعم حاجز البشرة"]],
-["☀️","واقي الشمس","dry oil sens","SPF 50","حماية يومية بدون لمعة.",["قوام خفيف","مناسب تحت المكياج"]],
-["🌸","كريم تهدئة","sens","للحساسة","يهدئ الاحمرار والتهيج.",["تركيبة بسيطة","بدون عطور"]]
+/* ============ عدّلي هون فقط ============ */
+const WHATSAPP = "963932120033";   /* رقمك مع رمز الدولة بدون + أو أصفار */
+const INSTAGRAM = "dr.anji_skincare";
+const LOCATION = "";               /* اتركيه فاضي إذا ما بدك تظهريه */
+const HOURS = "";                  /* مثال: يومياً 10 صباحاً - 6 مساءً */
+const SHOW_WORK_PHOTO = true;      /* false لإخفاء صورة العمل */
+/* نتائج قبل وبعد (بموافقة المريضات): ["قبل.jpg","بعد.jpg","وصف قصير"]
+   اتركيها فاضية [] ويختفي القسم تلقائياً */
+const RESULTS = [
+["r1-before.jpg","r1-after.jpg","حبوب وآثار على الخد"],
+["r2-before.jpg","r2-after.jpg","حب شباب ملتهب"],
+["r3-before.jpg","r3-after.jpg","حبوب وآثار على الخد"]
 ];
-/* ===== نهاية الجزء المسموح تعديله ===== */
+/* المنتجات: [الاسم, الحجم, الوصف, [مميزات], "صورة.jpg", "طريقة الاستخدام", "المكونات"] */
+const PRODUCTS = [
+["غسول البشرة","50 مل","ينظف بعمق ويزيل الشوائب.",["تنظيف عميق","يمهّد البشرة لباقي الروتين"],"p-cleanser.jpg"],
+["سيروم التغذية","30 مل","يرطب ويغذي بعمق.",["ترطيب وتغذية","قوام يمتص بسهولة"],"p-serum.jpg"],
+["كريم الترطيب","30 مل","يشد ويمنح نظارة فائقة.",["نظارة وشدّ","ختام مثالي للروتين"],"p-cream.jpg"],
+["سيروم الهالات","","مخصص للعناية بمنطقة تحت العين ويساعد على التخفيف من مظهر الهالات.",["للعناية بمنطقة تحت العين","تركيبة مدروسة"],"p-eye.jpg"],
+["بخاخ النضارة المتكامل","","نضارة فورية وترطيب عميق، ويساعد على توحيد لون البشرة.",["مضاد للأكسدة","منعش ولطيف حتى للحساسة"],"p-spray.jpg"]
+];
+/* ============ نهاية الجزء المسموح تعديله ============ */
 </script>
 <style>
-:root{--bg:#fbf7f4;--card:#fff;--tx:#33292a;--mut:#85757a;--ac:#a8566b;--ac2:#f6e6e8;--ln:#eddcdc}
-@media (prefers-color-scheme:dark){:root{--bg:#1c1618;--card:#271f22;--tx:#f5eaec;--mut:#b9a6ab;--ac:#e096a9;--ac2:#33262a;--ln:#3a2e32}}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.8}
-.w{max-width:980px;margin:auto;padding:0 18px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-.lg{font-weight:700;font-size:1.15rem;color:var(--ac)}
-nav a{color:var(--tx);text-decoration:none;font-size:.9rem;margin-inline-start:14px}
-.hero{text-align:center;padding:44px 0 50px;background:radial-gradient(circle at 50% 0,var(--ac2),transparent 70%)}
-.tag{display:inline-block;background:var(--ac2);color:var(--ac);padding:4px 16px;border-radius:30px;font-size:.85rem;font-weight:600}
-h1{font-size:2rem;line-height:1.4;margin:16px 0 10px}
-.hero p{max-width:520px;margin:0 auto;color:var(--mut)}
-.btn{display:inline-block;background:var(--ac);color:#fff;text-decoration:none;padding:12px 28px;border-radius:30px;font-weight:600;margin:20px 6px 0}
+:root{--bg:#fff8f8;--card:#fff;--bl:#f8e4e8;--rs:#e9a9ba;--ac:#b83b6b;--dp:#6e2442;--tx:#3b2730;--mut:#8a6d77;--ln:#f0d6dc}
+@media (prefers-color-scheme:dark){:root{--bg:#1d1418;--card:#2a1d23;--bl:#3a2530;--rs:#8a4a60;--ac:#e77aa0;--dp:#f5c8d6;--tx:#f7e9ee;--mut:#c4a6b1;--ln:#442d38}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Cairo,Tahoma,Arial,sans-serif;line-height:1.8}
+.w{max-width:1000px;margin:auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.lg{font-family:Georgia,serif;font-style:italic;color:var(--ac);font-size:1.15rem}
+nav a{color:var(--tx);text-decoration:none;font-size:.85rem;margin-inline-start:14px}
+.hero{display:grid;gap:28px;align-items:center;padding:16px 0 40px}
+@media(min-width:760px){.hero{grid-template-columns:1.1fr .9fr;padding:36px 0 56px}}
+.tag{display:inline-block;background:var(--bl);color:var(--ac);padding:4px 16px;border-radius:30px;font-size:.82rem;font-weight:600}
+h1{font-family:Amiri,serif;font-size:2.5rem;line-height:1.35;margin:14px 0 10px;color:var(--dp)}
+.hero p{color:var(--mut);max-width:480px;margin:0}
+.btn{display:inline-block;background:var(--ac);color:#fff;text-decoration:none;padding:12px 28px;border-radius:30px;font-weight:600;margin:20px 0 0;margin-inline-end:10px}
 .btn.o{background:transparent;color:var(--ac);border:1.5px solid var(--ac)}
-.tr{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:34px}
-.tr div{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:14px;font-size:.9rem}
-.tr b{display:block;font-size:1.4rem}
-h2{text-align:center;margin:46px 0 6px;font-size:1.5rem}
-.sub{text-align:center;color:var(--mut);margin:0 0 20px}
-.f{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
-.f button{font:inherit;font-size:.88rem;border:1px solid var(--ln);background:var(--card);color:var(--tx);padding:6px 16px;border-radius:30px;cursor:pointer}
-.f button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
-.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
-.c{background:var(--card);border:1px solid var(--ln);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.im{height:150px;background:linear-gradient(135deg,var(--ac2),var(--card));display:flex;align-items:center;justify-content:center;font-size:3.4rem}
+.ph{border-radius:200px 200px 28px 28px;overflow:hidden;box-shadow:0 20px 50px #b83b6b30;max-width:400px;margin:auto;background:var(--bl)}
+.ph img{display:block;width:100%;height:auto}
+.tr{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;padding-bottom:10px}
+.tr div{background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:12px;text-align:center;font-size:.88rem;font-weight:600}
+h2{font-family:Amiri,serif;text-align:center;font-size:1.9rem;color:var(--dp);margin:0 0 4px}
+.sub{text-align:center;color:var(--mut);margin:0 0 24px}
+section{padding:44px 0}.alt{background:linear-gradient(var(--bl),transparent)}
+.sv{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.sc{background:var(--card);border:1px solid var(--ln);border-radius:22px;padding:24px}
+.sc i{font-style:normal;font-size:1.8rem;display:block;margin-bottom:6px}
+.sc h3{margin:0 0 6px;font-family:Amiri,serif;font-size:1.35rem;color:var(--dp)}
+.sc p{color:var(--mut);margin:0 0 12px;font-size:.93rem}
+.ch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.ch span{background:var(--bl);color:var(--ac);border-radius:30px;padding:3px 14px;font-size:.82rem;font-weight:600}
+.lk{color:var(--ac);font-weight:600;text-decoration:none;font-size:.92rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:26px}
+.s{background:var(--card);border:1px solid var(--ln);border-radius:20px;padding:18px;text-align:center}
+.s b{display:flex;width:40px;height:40px;margin:0 auto 8px;border-radius:50%;background:var(--ac);color:#fff;align-items:center;justify-content:center;font-family:Amiri,serif;font-size:1.2rem}
+.s h3{margin:0;font-size:1rem}.s p{margin:2px 0 0;color:var(--mut);font-size:.86rem}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.c{background:var(--card);border:1px solid var(--ln);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.im{height:110px;background:linear-gradient(135deg,var(--bl),var(--rs));display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-style:italic;font-size:2.4rem;color:#fff;letter-spacing:2px}
 .b{padding:16px;display:flex;flex-direction:column;flex:1}
-.b h3{margin:0;font-size:1.08rem}
-.b small{color:var(--ac);font-weight:600}
+.b h3{margin:0;font-size:1.05rem}.b small{color:var(--ac);font-weight:600}
 .b p{margin:6px 0;color:var(--mut);font-size:.9rem}
-.b ul{margin:4px 0 12px;padding-inline-start:18px;font-size:.85rem}
-.b a{margin-top:auto;text-align:center;background:var(--ac);color:#fff;text-decoration:none;padding:9px;border-radius:12px;font-weight:600;font-size:.92rem}
-.ab{display:grid;gap:20px;align-items:center;background:var(--card);border:1px solid var(--ln);border-radius:20px;padding:24px}
-@media(min-width:700px){.ab{grid-template-columns:180px 1fr}}
-.av{width:140px;height:140px;border-radius:50%;background:var(--ac2);display:flex;align-items:center;justify-content:center;font-size:3.4rem;margin:auto}
-.ab h3{margin:0 0 6px}
-.st{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:18px}
-.st div{background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:16px}
-.st b{color:var(--ac);font-size:1.5rem}
+.b ul{margin:2px 0 12px;padding-inline-start:18px;font-size:.84rem}
+.b a{margin-top:auto;text-align:center;background:var(--ac);color:#fff;text-decoration:none;padding:9px;border-radius:12px;font-weight:600;font-size:.9rem}
+.ab2{display:grid;gap:26px;align-items:center}
+@media(min-width:760px){.ab2{grid-template-columns:320px 1fr}}
+.pp{border-radius:200px 200px 24px 24px;overflow:hidden;max-width:320px;margin:auto;box-shadow:0 18px 44px #b83b6b30}
+.pp img{display:block;width:100%;height:auto}
+.tx h3{margin:0 0 8px;font-family:Amiri,serif;font-size:1.7rem;color:var(--dp)}
+.tx p{color:var(--mut);margin:0 0 10px}
+.cr{list-style:none;padding:0;margin:0 0 14px}
+.cr li{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:8px 14px;margin-bottom:8px;font-size:.9rem}
+.wk{margin-top:26px}.wk img{display:block;width:100%;max-height:340px;object-fit:cover;object-position:center 30%;border-radius:24px}
+.rs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.ba{direction:ltr;position:relative;height:320px;border-radius:22px;overflow:hidden;--p:50%;background:var(--bl)}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .bb{clip-path:inset(0 0 0 var(--p))}
+.ba .ln{position:absolute;top:0;bottom:0;left:var(--p);width:3px;background:#fff;pointer-events:none;box-shadow:0 0 8px #0004}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+.lb{position:absolute;top:10px;padding:2px 12px;border-radius:20px;background:#fffa;color:var(--dp);font-size:.8rem;font-weight:700}
+.cap{text-align:center;color:var(--mut);font-size:.88rem;margin:6px 0 0}
+.note{text-align:center;color:var(--mut);font-size:.82rem;margin-top:16px}
 details{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:12px 16px;margin-bottom:10px}
 summary{cursor:pointer;font-weight:600}
 details p{margin:8px 0 0;color:var(--mut);font-size:.92rem}
-.ct{text-align:center;background:var(--ac2);border-radius:22px;padding:32px 18px;margin-top:46px}
-footer{text-align:center;color:var(--mut);font-size:.85rem;padding:30px 18px 90px}
-.fw{position:fixed;inset-inline-start:16px;bottom:16px;background:#25d366;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 4px 14px #0004}
+.ct{text-align:center;background:linear-gradient(135deg,var(--bl),var(--rs));border-radius:28px;padding:40px 18px}
+.ct h2{color:var(--dp)}.ct .sub{color:var(--dp);opacity:.85}
+.inf{margin-top:18px;font-size:.9rem;color:var(--dp)}
+footer{text-align:center;color:var(--mut);font-size:.82rem;padding:30px 18px 100px}
+.fw{position:fixed;inset-inline-start:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 4px 14px #0004}
+.hx{position:relative;overflow:hidden;border-radius:0 0 44px 44px;background:linear-gradient(120deg,#fbe3ea,#f2c4d3,#fdeef2,#eeb4c7);background-size:300% 300%;animation:sat 16s ease infinite}
+@media (prefers-color-scheme:dark){.hx{background:linear-gradient(120deg,#2d1a23,#4a2536,#251820,#3c1f2e);background-size:300% 300%}}
+@keyframes sat{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.bo{position:absolute;border-radius:50%;filter:blur(50px);opacity:.55;background:#fff;animation:dr 12s ease-in-out infinite}
+.b1{width:240px;height:240px;top:-60px;right:-40px}.b2{width:180px;height:180px;bottom:30px;left:-40px;background:#e77aa0;opacity:.3;animation-delay:-4s}.b3{width:120px;height:120px;top:40%;left:45%;animation-delay:-8s}
+@keyframes dr{0%,100%{transform:translate(0,0)}50%{transform:translate(24px,-30px)}}
+.hx .w{position:relative}.hx .hero{padding-bottom:56px}
+.fl{animation:fl 6s ease-in-out infinite}@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.tr{margin-top:-26px;position:relative}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+.c,.sc,.s{transition:transform .3s ease,box-shadow .3s ease}
+.c:hover,.sc:hover,.s:hover{transform:translateY(-6px);box-shadow:0 16px 36px #b83b6b22}
+.c{cursor:pointer}.im{position:relative}
+.im::after{content:"التفاصيل +";position:absolute;bottom:8px;right:12px;font-family:Cairo,sans-serif;font-style:normal;letter-spacing:0;font-size:.72rem;background:#fffb;color:var(--dp);padding:1px 10px;border-radius:20px}
+.qz{max-width:560px;margin:auto;background:var(--card);border:1px solid var(--ln);border-radius:26px;padding:26px;box-shadow:0 14px 40px #b83b6b18}
+.pg{height:6px;background:var(--bl);border-radius:6px;overflow:hidden;margin-bottom:18px}.pg i{display:block;height:100%;background:var(--ac);transition:width .4s}
+.qz h3{font-family:Amiri,serif;font-size:1.4rem;color:var(--dp);margin:0 0 14px;text-align:center}
+.op{display:grid;gap:10px}.op button,.qz .rt{font:inherit;cursor:pointer}
+.op button{background:var(--bg);border:1.5px solid var(--ln);color:var(--tx);border-radius:16px;padding:12px;font-weight:600;transition:.2s}
+.op button:hover{border-color:var(--ac);background:var(--bl);transform:scale(1.02)}
+.rs2{text-align:center}.rs2 .ch{justify-content:center;margin:10px 0}
+.rt{background:none;border:none;color:var(--mut);margin-top:12px;text-decoration:underline}
+dialog{border:none;padding:0;border-radius:26px;max-width:460px;width:calc(100% - 28px);background:var(--card);color:var(--tx);box-shadow:0 30px 80px #0006}
+dialog::backdrop{background:#3b1a2899;backdrop-filter:blur(6px)}
+.mh{height:150px;background:linear-gradient(135deg,var(--bl),var(--rs));display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-style:italic;font-size:3.2rem;color:#fff;letter-spacing:3px}
+.mb{padding:22px}.mb h3{margin:0;font-family:Amiri,serif;font-size:1.6rem;color:var(--dp)}.mb small{color:var(--ac);font-weight:600}
+.mb p{color:var(--mut);margin:8px 0}.mb ul{padding-inline-start:18px;margin:6px 0 14px;font-size:.92rem}
+.mx{position:absolute;top:12px;left:12px;width:36px;height:36px;border-radius:50%;border:none;background:#fffc;color:var(--dp);font-size:1.2rem;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.hx,.bo,.fl{animation:none}.js .rv{opacity:1;transform:none;transition:none}}
+.im{height:auto;aspect-ratio:1/1;overflow:hidden}.im img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.c:hover .im img{transform:scale(1.06)}
+.mh{height:280px;padding:0;overflow:hidden}.mh img{width:100%;height:100%;object-fit:cover}
+.who{display:grid;gap:24px;align-items:center}
+@media(min-width:760px){.who{grid-template-columns:260px 1fr}}
+.wp{width:230px;height:230px;border-radius:50%;overflow:hidden;margin:auto;border:6px solid var(--card);box-shadow:0 16px 40px #b83b6b30}
+.wp img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.who h2{text-align:start;margin-top:8px}.who p{color:var(--mut);margin:0 0 12px}
+@media(max-width:759px){.who>div:last-child{text-align:center}.who h2{text-align:center}}
+.ba{touch-action:pan-y;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+.ba img{pointer-events:none;-webkit-user-drag:none}
+.ba .ln::after{content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;color:#b83b6b;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-style:normal;box-shadow:0 2px 12px #0005}
+.ttl{color:var(--ac);font-weight:700;margin:-4px 0 10px!important}
+.kb{max-width:520px;margin:0 auto 28px;border-radius:28px;overflow:hidden;box-shadow:0 18px 44px #b83b6b30}.kb img{display:block;width:100%;height:auto}
+html{background:#fbe3ea}@media (prefers-color-scheme:dark){html{background:#2d1a23}}
+.hx{padding-top:env(safe-area-inset-top,0px);border-radius:0 0 44px 44px}
+.bo{opacity:.35}
+@media (prefers-color-scheme:dark){.bo,.b2{background:#e77aa0;opacity:.12}}
 </style>
 </head>
 <body>
-<div class="w"><nav><span class="lg">د. انجي نصرة</span><div><a href="#p">المنتجات</a><a href="#a">عنّي</a><a href="#q">أسئلة</a><a href="#c">تواصل</a></div></nav></div>
+<header class="hx"><i class="bo b1"></i><i class="bo b2"></i><div class="w"><nav><span class="lg">Dr. Anji Skincare</span><div><a href="#p">المنتجات</a><a href="#qz">الاختبار</a><a href="#s">الخدمات</a><a href="#a">قصتي</a></div></nav>
+<div class="hero"><div>
+<span class="tag">تعرّفي على</span>
+<h1>د. انجي نصرة</h1>
+<p class="ttl">أخصائية العناية بالبشرة والتجميل</p>
+<p>أدمج فهم البشرة مع علم تركيب المستحضرات، لأقدم لكِ منتجات واستشارات وجلسات مخصصة لبشرتك.</p>
+<ul class="cr" style="margin-top:14px"><li>🎓 كلية التجميل والعناية الصحية، جامعة الحواش الخاصة</li><li>🧪 دورات متقدمة في تركيب المستحضرات التجميلية والعلاجية</li></ul>
+<a class="btn" href="#p">اكتشفي المنتجات</a><a class="btn o cons" target="_blank" rel="noopener">احجزي استشارة</a>
+</div><div class="ph fl"><img src="doctor.jpg" alt="د. انجي نصرة"></div></div></div></header>
+<div class="w"><div class="tr"><div>🧪 تركيبات خاصة</div><div>🔍 تحليل بشرة دقيق</div><div>💬 خطة عناية مخصصة</div></div></div>
+<section class="alt" id="p"><div class="w"><h2>منتجاتنا</h2><p class="sub">روتين من ثلاث خطوات، ومنتجات إضافية</p>
+<div class="kb"><img src="hero.jpg" alt="روتين Dr. Anji Skincare: غسول وسيروم وكريم"></div>
+<div class="steps">
+<div class="s"><b>1</b><h3>غسول البشرة</h3><p>ينظف بعمق ويزيل الشوائب</p></div>
+<div class="s"><b>2</b><h3>سيروم التغذية</h3><p>يرطب ويغذي بعمق</p></div>
+<div class="s"><b>3</b><h3>كريم الترطيب</h3><p>يشد ويمنح نظارة فائقة</p></div></div>
+<div style="text-align:center;margin:-8px 0 30px"><a class="btn" id="kit" target="_blank" rel="noopener" style="margin:0">اطلبي الروتين كاملاً</a></div>
+<div class="g" id="g"></div></div></section>
+<section id="qz"><div class="w"><h2>محتارة؟ اعرفي روتينك المناسب</h2><p class="sub">ثلاثة أسئلة بسيطة، واقتراح يناسب بشرتك</p><div class="qz" id="qzb"></div></div></section>
+<section class="alt" id="s"><div class="w"><h2>خدماتنا</h2><p class="sub">منظومة متكاملة للعناية بالبشرة</p>
+<div class="sv">
+<div class="sc"><i>🧪</i><h3>تركيب وتطوير المستحضرات</h3><p>منتجات تجميلية وعلاجية خاصة بنا، مصممة بعناية على أسس علمية كيميائية وطبية، لتساعد على العناية بمشاكل البشرة المختلفة مثل التصبغات وحب الشباب والجفاف.</p><div class="ch"><span>غسول + سيروم + كريم</span><span>سيروم الهالات</span><span>بخاخ النضارة</span></div><a class="lk" href="#p">شوفي المنتجات ←</a></div>
+<div class="sc"><i>🔍</i><h3>استشارات وتحليل البشرة</h3><p>فحص دقيق لنوع بشرتك، وتحديد المشاكل السطحية والعميقة، ثم رسم خطة عناية مخصصة وجدول يومي يناسب طبيعة جلدك.</p><a class="btn cons" target="_blank" rel="noopener" style="margin:6px 0 0">احجزي استشارتك</a></div>
+<div class="sc"><i>💆‍♀️</i><h3>جلسات العناية بالبشرة</h3><p>جلسات تخصصية تُحدَّد بعد تحليل بشرتك لتناسب حالتها واحتياجها.</p><div class="ch"><span>تنظيف بشرة</span><span>ميزو مع ديرمابن</span></div><a class="btn bk" target="_blank" rel="noopener" style="margin:6px 0 0">احجزي جلسة</a></div>
+</div></div></section>
+<section id="res" hidden><div class="w"><h2>نتائج حقيقية</h2><p class="sub">اسحبي لترين الفرق</p><div class="rs" id="rs"></div>
+<p class="note">النتائج تختلف من شخص لآخر حسب نوع البشرة والالتزام بالروتين، وتُنشر بموافقة أصحابها.</p></div></section>
+<section class="alt" id="a"><div class="w"><h2>قصة د. انجي</h2><p class="sub">من الشغف بالبشرة إلى تركيب المستحضرات</p>
+<div class="ab2"><div class="pp" id="wk"><img src="work.jpg" alt="د. انجي أثناء العمل"></div><div class="tx"><h3>د. انجي نصرة</h3>
 
-<section class="hero"><div class="w">
-<span class="tag">تركيبة طبيبة تجميل</span>
-<h1>بشرتك تستحق عناية<br>مبنية على علم</h1>
-<p>منتجات صممتها الدكتورة انجي نصرة بعد سنوات من الخبرة مع البشرة، بمكونات مدروسة ولطيفة وفعّالة.</p>
-<a class="btn" href="#p">تصفحي المنتجات</a><a class="btn o wa" target="_blank" rel="noopener">استشارة عبر واتساب</a>
-<div class="tr"><div><b>🔬</b>تركيبات مدروسة</div><div><b>🌿</b>مكونات لطيفة</div><div><b>👩‍⚕️</b>بإشراف طبيبة</div><div><b>💬</b>نصيحة شخصية</div></div>
+<p>لأن شغفي بالبشرة لا يتوقف عند حدود الدراسة الأكاديمية، عززت مسيرتي بالعديد من الكورسات المتقدمة في تركيب المستحضرات التجميلية والعلاجية. هذا الدمج بين فهم عمق البشرة وعلم تركيب المواد يتيح لي تقديم منتجات تُصنع بدقة لتلبي احتياجات كل بشرة بشكل مخصص وآمن.</p>
+<p>بصفتي أخصائية بشرة ممارِسة، أؤمن أن الجمال الحقيقي يبدأ من صحة الجلد؛ لذا أضع خبرتي الأكاديمية والعلمية لتقديم استشارات وعلاجات متكاملة للمشاكل الجلدية، للوصول معاً إلى بشرة صحية ونضرة ومشرقة طبيعياً.</p></div></div>
 </div></section>
-
-<main class="w">
-<h2 id="p">منتجاتنا</h2><p class="sub">اختاري حسب نوع بشرتك</p>
-<div class="f" id="f"><button class="on" data-k="all">الكل</button><button data-k="dry">جافة</button><button data-k="oil">دهنية</button><button data-k="sens">حساسة</button></div>
-<div class="g" id="g"></div>
-
-<h2 id="a">عن الدكتورة</h2>
-<div class="ab"><div class="av">👩‍⚕️</div><div><h3>د. انجي نصرة</h3><p>طبيبة تجميل مهتمة بالعناية بالبشرة والحفاظ على جمالها الطبيعي. بدأت بتطوير منتجاتها لتقديم عناية بسيطة وآمنة وفعّالة تناسب الاستخدام اليومي.</p><p style="color:var(--mut)">فلسفتها: روتين قليل الخطوات، ونتائج حقيقية، وبدون وعود مبالغ فيها.</p></div></div>
-
-<h2>لماذا منتجاتنا؟</h2>
-<div class="st"><div><b>01</b><br>تركيبة مدروسة طبياً</div><div><b>02</b><br>تناسب الاستخدام اليومي</div><div><b>03</b><br>شفافية كاملة بالمكونات</div><div><b>04</b><br>نصيحة مخصصة قبل الطلب</div></div>
-
-<h2 id="q">أسئلة شائعة</h2>
-<details><summary>كيف أعرف المنتج المناسب لبشرتي؟</summary><p>راسلينا على واتساب وصفي لنا بشرتك، وسنرشح لك الروتين الأنسب.</p></details>
-<details><summary>كيف أطلب؟</summary><p>اضغطي زر الطلب تحت المنتج وسيفتح واتساب برسالة جاهزة.</p></details>
-<details><summary>هل المنتجات تناسب البشرة الحساسة؟</summary><p>لدينا خيارات لطيفة للحساسة. ننصح بتجربة المنتج على منطقة صغيرة أولاً.</p></details>
-<details><summary>متى تظهر النتائج؟</summary><p>تختلف من شخص لآخر، وغالباً تظهر مع الاستمرار على الروتين عدة أسابيع.</p></details>
-
-<div class="ct" id="c"><h2 style="margin-top:0">جاهزة تبدئين روتينك؟</h2><p class="sub">راسلينا وسنساعدك باختيار المناسب</p>
-<a class="btn wa" target="_blank" rel="noopener">واتساب</a><a class="btn o ig" target="_blank" rel="noopener">انستغرام</a></div>
-</main>
-<footer>© د. انجي نصرة · المحتوى للتوعية ولا يغني عن استشارة الطبيب</footer>
+<section id="q"><div class="w"><h2>أسئلة شائعة</h2><p class="sub">&nbsp;</p>
+<details><summary>كيف أعرف المنتج المناسب لبشرتي؟</summary><p>احجزي استشارة وتحليل للبشرة، وسنحدد نوع بشرتك ونرسم لك خطة عناية مناسبة.</p></details>
+<details><summary>كيف أطلب منتجاً؟</summary><p>اضغطي زر الطلب تحت المنتج وسيفتح واتساب برسالة جاهزة، ونتفق على التفاصيل.</p></details>
+<details><summary>كيف أحجز جلسة أو استشارة؟</summary><p>عبر واتساب أو رسالة على انستغرام، ونحدد الموعد المناسب.</p></details>
+<details><summary>هل المنتجات تناسب البشرة الحساسة؟</summary><p>بعض منتجاتنا لطيفة ومناسبة للحساسة، وننصح بتجربة أي منتج جديد على منطقة صغيرة أولاً.</p></details>
+<details><summary>متى تظهر النتائج؟</summary><p>تختلف من شخص لآخر حسب نوع البشرة والالتزام بالروتين، وغالباً تظهر مع الاستمرار عدة أسابيع.</p></details></div></section>
+<section><div class="w"><div class="ct" id="c"><h2>جاهزة تبدئين رحلة بشرتك؟</h2><p class="sub">راسلينا وسنرشح لك الأنسب</p>
+<a class="btn wa" target="_blank" rel="noopener">واتساب</a><a class="btn o ig" target="_blank" rel="noopener" style="background:#fff8">انستغرام</a>
+<div class="inf" id="inf"></div></div></div></section>
+<footer>© Dr. Anji Skincare · المحتوى للتوعية ولا يغني عن استشارة الطبيب</footer>
+<dialog id="md"></dialog>
 <a class="fw wa" target="_blank" rel="noopener" aria-label="واتساب">💬</a>
 
 <script>
 const wa=t=>"https://wa.me/"+WHATSAPP+(t?"?text="+encodeURIComponent(t):"");
-document.querySelectorAll(".wa").forEach(a=>a.href=wa());
-document.querySelectorAll(".ig").forEach(a=>a.href="https://instagram.com/"+INSTAGRAM);
-const g=document.getElementById("g");
-function r(k){g.innerHTML=PRODUCTS.filter(p=>k=="all"||p[2].includes(k)).map(p=>`<div class="c"><div class="im">${p[0]}</div><div class="b"><h3>${p[1]}</h3><small>${p[3]}</small><p>${p[4]}</p><ul>${p[5].map(x=>`<li>${x}</li>`).join("")}</ul><a href="${wa("مرحبا، بدي أطلب/أسأل عن "+p[1])}" target="_blank" rel="noopener">اطلبي عبر واتساب</a></div></div>`).join("")}
-document.getElementById("f").onclick=e=>{if(e.target.dataset.k){document.querySelectorAll("#f button").forEach(b=>b.classList.remove("on"));e.target.classList.add("on");r(e.target.dataset.k)}};
-r("all");
+const $=s=>document.querySelectorAll(s);
+$(".wa").forEach(a=>a.href=wa());
+$(".ig").forEach(a=>a.href="https://instagram.com/"+INSTAGRAM);
+$(".cons").forEach(a=>a.href=wa("مرحبا، بدي استشارة وتحليل لبشرتي"));
+$(".bk").forEach(a=>a.href=wa("مرحبا، بدي أحجز جلسة (تنظيف بشرة / ميزو مع ديرمابن)"));
+document.getElementById("kit").href=wa("مرحبا، بدي أطلب الروتين المتكامل (غسول + سيروم + كريم)");
+document.getElementById("g").innerHTML=PRODUCTS.map(p=>`<div class="c"><div class="im">${p[4]?`<img src="${p[4]}" alt="${p[0]}" loading="lazy">`:"AN"}</div><div class="b"><h3>${p[0]}</h3><small>${p[1]}</small><p>${p[2]}</p><ul>${p[3].map(x=>`<li>${x}</li>`).join("")}</ul><a href="${wa("مرحبا، بدي أطلب/أسأل عن "+p[0])}" target="_blank" rel="noopener">اطلبي عبر واتساب</a></div></div>`).join("");
+if(!SHOW_WORK_PHOTO){const w=document.getElementById("wk");if(w)w.hidden=true}
+if(RESULTS.length){document.getElementById("res").hidden=false;
+document.getElementById("rs").innerHTML=RESULTS.map(r=>`<div><div class="ba" role="slider" tabindex="0" aria-label="مقارنة قبل وبعد" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><img src="${r[0]}" alt="قبل"><img class="bb" src="${r[1]}" alt="بعد"><span class="lb" style="left:10px">قبل</span><span class="lb" style="right:10px">بعد</span><i class="ln"></i></div><p class="cap">${r[2]||""}</p></div>`).join("")}
+document.querySelectorAll(".ba").forEach(b=>{const set=x=>{const r=b.getBoundingClientRect();const p=Math.max(0,Math.min(100,(x-r.left)/r.width*100));b.style.setProperty("--p",p+"%");b.setAttribute("aria-valuenow",Math.round(p))};
+b.addEventListener("pointerdown",e=>{b.setPointerCapture(e.pointerId);set(e.clientX)});
+b.addEventListener("pointermove",e=>{if(b.hasPointerCapture(e.pointerId))set(e.clientX)});
+b.addEventListener("keydown",e=>{let v=+b.getAttribute("aria-valuenow");if(e.key=="ArrowLeft")v-=5;else if(e.key=="ArrowRight")v+=5;else return;v=Math.max(0,Math.min(100,v));b.style.setProperty("--p",v+"%");b.setAttribute("aria-valuenow",v);e.preventDefault()})});
+const inf=[LOCATION&&"📍 "+LOCATION,HOURS&&"🕒 "+HOURS].filter(Boolean).join(" · ");
+document.getElementById("inf").textContent=inf;
+
+document.documentElement.classList.add("js");
+function openM(i){const p=PRODUCTS[i],d=document.getElementById("md");
+d.innerHTML=`<button class="mx" aria-label="إغلاق" onclick="this.closest('dialog').close()">✕</button><div class="mh">${p[4]?`<img src="${p[4]}" alt="${p[0]}">`:"AN"}</div><div class="mb"><h3>${p[0]}</h3><small>${p[1]}</small><p>${p[2]}</p><ul>${p[3].map(x=>`<li>${x}</li>`).join("")}</ul>${p[5]?`<p><b>طريقة الاستخدام:</b> ${p[5]}</p>`:""}${p[6]?`<p><b>المكونات:</b> ${p[6]}</p>`:""}<a class="btn" style="display:block;text-align:center;margin:10px 0 0" href="${wa("مرحبا، بدي أطلب/أسأل عن "+p[0])}" target="_blank" rel="noopener">اطلبي عبر واتساب</a></div>`;d.showModal()}
+const md=document.getElementById("md");md.addEventListener("click",e=>{if(e.target===md)md.close()});
+document.querySelectorAll(".c").forEach((c,i)=>c.onclick=e=>{if(!e.target.closest("a"))openM(i)});
+const Q=[["ما نوع بشرتك؟",[["جافة","dry"],["دهنية","oil"],["مختلطة","mix"],["حساسة","sens"]]],["شو أكتر شي بدك تهتمي فيه؟",[["نظارة وإشراقة","glow"],["ترطيب وتغذية","hyd"],["منطقة تحت العين","eye"],["تنظيف البشرة","clean"]]],["كم خطوة بتفضلي بالروتين؟",[["خطوة أو اثنتين بسيطة","min"],["روتين متكامل","full"]]]];
+let qa=[];const qb=document.getElementById("qzb");
+function qr(){const s=qa.length;if(s<Q.length){qb.innerHTML=`<div class="pg"><i style="width:${s/Q.length*100}%"></i></div><h3>${Q[s][0]}</h3><div class="op">${Q[s][1].map(o=>`<button data-v="${o[1]}">${o[0]}</button>`).join("")}</div>`;qb.querySelectorAll("button").forEach(b=>b.onclick=()=>{qa.push([b.textContent,b.dataset.v]);qr()});return}
+const map={glow:[4],hyd:[1,2],eye:[3],clean:[0]};let ids=map[qa[1][1]];let kit=qa[2][1]=="full";
+if(kit)ids=[...new Set([0,1,2,...ids])];else ids=ids.slice(0,2);
+const names=ids.map(i=>PRODUCTS[i][0]);
+const sens=qa[0][1]=="sens"?"<p style='color:var(--mut);font-size:.88rem'>لبشرتك الحساسة ننصح بتجربة أي منتج على منطقة صغيرة أولاً، والاستشارة تعطي نتيجة أدق.</p>":"";
+const msg="مرحبا، عملت اختبار البشرة: "+qa.map(x=>x[0]).join(" / ")+". المقترح: "+names.join(" + ");
+qb.innerHTML=`<div class="rs2"><div class="pg"><i style="width:100%"></i></div><h3>اقتراحنا لك 🌸</h3><div class="ch">${names.map(n=>`<span>${n}</span>`).join("")}</div>${sens}<a class="btn" style="display:block;margin:12px 0 0" href="${wa(msg)}" target="_blank" rel="noopener">اطلبيه عبر واتساب</a><a class="btn o cons" style="display:block;margin:10px 0 0" target="_blank" rel="noopener" href="${wa("مرحبا، بدي استشارة وتحليل لبشرتي")}">أو احجزي استشارة لخطة أدق</a><button class="rt" onclick="qa=[];qr()">إعادة الاختبار</button><p class="note">اقتراح عام وليس تشخيصاً طبياً.</p></div>`}
+qr();
+const tg=".sub,h2,.sc,.s,.c,.ab2,.wk,details,.ct,.qz,.tr div";
+if("IntersectionObserver" in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target;el.classList.add("in");io.unobserve(el);setTimeout(()=>{el.classList.remove("rv","in");el.style.transitionDelay=""},1100)}}),{threshold:.12});
+document.querySelectorAll(tg).forEach((el,i)=>{el.classList.add("rv");el.style.transitionDelay=(i%4)*.08+"s";io.observe(el)})}
 </script>
 </body>
 </html>
