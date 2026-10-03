@@ -8,13 +8,14 @@
 <meta property="og:title" content="Dr. Anji Skincare | د. انجي نصرة">
 <meta property="og:description" content="مستحضرات عناية بالبشرة واستشارات وجلسات تخصصية.">
 <meta property="og:image" content="https://dranjinasra.github.io/hero.jpg">
-<meta name="theme-color" content="#fbe3ea" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#2d1a23" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<meta name="theme-color" content="#fbe3ea">
+<meta name="color-scheme" content="light">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 <script>
 /* ============ عدّلي هون فقط ============ */
-const WHATSAPP = "963932120033";   /* رقمك مع رمز الدولة بدون + أو أصفار */
+const WHATSAPP = "963984000037";   /* رقمك مع رمز الدولة بدون + أو أصفار */
 const INSTAGRAM = "dr.anji_skincare";
 const LOCATION = "";               /* اتركيه فاضي إذا ما بدك تظهريه */
 const HOURS = "";                  /* مثال: يومياً 10 صباحاً - 6 مساءً */
@@ -28,9 +29,9 @@ const RESULTS = [
 ];
 /* المنتجات: [الاسم, الحجم, الوصف, [مميزات], "صورة.jpg", "طريقة الاستخدام", "المكونات"] */
 const PRODUCTS = [
-["غسول البشرة","50 مل","ينظف بعمق ويزيل الشوائب.",["تنظيف عميق","يمهّد البشرة لباقي الروتين"],"p-cleanser.jpg"],
-["سيروم التغذية","30 مل","يرطب ويغذي بعمق.",["ترطيب وتغذية","قوام يمتص بسهولة"],"p-serum.jpg"],
-["كريم الترطيب","30 مل","يشد ويمنح نظارة فائقة.",["نظارة وشدّ","ختام مثالي للروتين"],"p-cream.jpg"],
+["الغسول","50 مل","ينظف البشرة بعمق ويساعد على إزالة الرؤوس السوداء وحب الشباب.",["إزالة الرؤوس السوداء","حب الشباب","تنظيف عميق"],"p-cleanser.jpg"],
+["سيروم النضارة","30 مل","نضارة وترطيب، ويساعد على توحيد لون البشرة.",["نضارة","ترطيب","توحيد اللون"],"p-serum.jpg"],
+["كريم الكولاجين","30 مل","يساعد على شد وتفتيح البشرة ويمنحها نضارة.",["شد البشرة","تفتيح","نضارة"],"p-cream.jpg"],
 ["سيروم الهالات","","مخصص للعناية بمنطقة تحت العين ويساعد على التخفيف من مظهر الهالات.",["للعناية بمنطقة تحت العين","تركيبة مدروسة"],"p-eye.jpg"],
 ["بخاخ النضارة المتكامل","","نضارة فورية وترطيب عميق، ويساعد على توحيد لون البشرة.",["مضاد للأكسدة","منعش ولطيف حتى للحساسة"],"p-spray.jpg"]
 ];
@@ -38,7 +39,7 @@ const PRODUCTS = [
 </script>
 <style>
 :root{--bg:#fff8f8;--card:#fff;--bl:#f8e4e8;--rs:#e9a9ba;--ac:#b83b6b;--dp:#6e2442;--tx:#3b2730;--mut:#8a6d77;--ln:#f0d6dc}
-@media (prefers-color-scheme:dark){:root{--bg:#1d1418;--card:#2a1d23;--bl:#3a2530;--rs:#8a4a60;--ac:#e77aa0;--dp:#f5c8d6;--tx:#f7e9ee;--mut:#c4a6b1;--ln:#442d38}}
+
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:12px}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:Cairo,Tahoma,Arial,sans-serif;line-height:1.8}
 .w{max-width:1000px;margin:auto;padding:0 20px}
@@ -106,7 +107,7 @@ details p{margin:8px 0 0;color:var(--mut);font-size:.92rem}
 footer{text-align:center;color:var(--mut);font-size:.82rem;padding:30px 18px 100px}
 .fw{position:fixed;inset-inline-start:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 4px 14px #0004}
 .hx{position:relative;overflow:hidden;border-radius:0 0 44px 44px;background:linear-gradient(120deg,#fbe3ea,#f2c4d3,#fdeef2,#eeb4c7);background-size:300% 300%;animation:sat 16s ease infinite}
-@media (prefers-color-scheme:dark){.hx{background:linear-gradient(120deg,#2d1a23,#4a2536,#251820,#3c1f2e);background-size:300% 300%}}
+
 @keyframes sat{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 .bo{position:absolute;border-radius:50%;filter:blur(50px);opacity:.55;background:#fff;animation:dr 12s ease-in-out infinite}
 .b1{width:240px;height:240px;top:-60px;right:-40px}.b2{width:180px;height:180px;bottom:30px;left:-40px;background:#e77aa0;opacity:.3;animation-delay:-4s}.b3{width:120px;height:120px;top:40%;left:45%;animation-delay:-8s}
@@ -149,14 +150,55 @@ dialog::backdrop{background:#3b1a2899;backdrop-filter:blur(6px)}
 .ba .ln::after{content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;color:#b83b6b;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-style:normal;box-shadow:0 2px 12px #0005}
 .ttl{color:var(--ac);font-weight:700;margin:-4px 0 10px!important}
 .kb{max-width:520px;margin:0 auto 28px;border-radius:28px;overflow:hidden;box-shadow:0 18px 44px #b83b6b30}.kb img{display:block;width:100%;height:auto}
-html{background:#fbe3ea}@media (prefers-color-scheme:dark){html{background:#2d1a23}}
+html{background:#fbe3ea}
 .hx{padding-top:env(safe-area-inset-top,0px);border-radius:0 0 44px 44px}
 .bo{opacity:.35}
-@media (prefers-color-scheme:dark){.bo,.b2{background:#e77aa0;opacity:.12}}
+
+.hx .w{z-index:1}
+.pt{position:absolute;top:-30px;border-radius:150% 0 150% 0;background:linear-gradient(135deg,#f9cdd8,#e98aa6);opacity:.75;animation:fall linear infinite;pointer-events:none}
+@keyframes fall{0%{transform:translate(0,-30px) rotate(0)}50%{transform:translate(40px,650px) rotate(180deg)}100%{transform:translate(-20px,1400px) rotate(360deg)}}
+.sp{position:absolute;width:5px;height:5px;border-radius:50%;background:#d4af37;box-shadow:0 0 10px #f5d77a;animation:tw ease-in-out infinite;pointer-events:none}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1.2)}}
+h2::after{content:"";display:block;width:80px;height:2px;margin:10px auto 0;background:linear-gradient(90deg,transparent,#c9a24a,transparent)}
+.tag{border:1px solid #e3c98a}
+.ph{border:4px solid #fff;outline:1px solid #c9a24a99;outline-offset:7px}
+.btn{position:relative;overflow:hidden}
+.btn:not(.o)::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,#ffffff80,transparent);transform:skewX(-20deg);animation:sh 4.5s ease-in-out infinite}
+@keyframes sh{0%,65%{left:-70%}100%{left:140%}}
+.hl{display:flex;gap:14px;overflow-x:auto;padding:24px 4px 8px;scrollbar-width:none}
+.hl::-webkit-scrollbar{display:none}
+@media(min-width:760px){.hl{justify-content:center}}
+.hl a{flex:0 0 auto;width:76px;text-align:center;color:var(--tx);text-decoration:none;font-size:.8rem;font-weight:600}
+.hl span{display:block;width:70px;height:70px;margin:0 auto 6px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#d4af37,#e77aa0,#b83b6b);transition:transform .3s}
+.hl a:active span,.hl a:hover span{transform:scale(1.08)}
+.hl img,.hl i{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid var(--bg);display:flex;align-items:center;justify-content:center;background:var(--bl);font-style:normal;font-size:1.6rem}
+.sb{display:none}
+@media(max-width:759px){.sb{display:flex;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));gap:8px;padding:8px;border-radius:22px;background:#fffffff2;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 10px 30px #b83b6b40;z-index:50;transform:translateY(160%);transition:transform .45s ease}
+.sb.on{transform:none}.sb a{flex:1;text-align:center;padding:11px 6px;border-radius:16px;font-weight:700;text-decoration:none;font-size:.92rem}
+.sb a:first-child{background:var(--ac);color:#fff}.sb a:last-child{background:var(--bl);color:var(--ac)}.fw{display:none}}
+@media (prefers-reduced-motion:reduce){.pt,.sp,.btn::after{display:none}}
+.lg{display:flex;align-items:center;gap:8px;text-decoration:none}.lg img{height:40px;width:auto;display:block}
+@media(max-width:520px){.lg span{display:none}}
+.fl2{width:130px;display:block;margin:0 auto 12px}
+.ct{position:relative;overflow:hidden}.ct>*{position:relative}
+.ct::before{content:"";position:absolute;left:-30px;bottom:-30px;width:230px;height:190px;background:url(logo.png) no-repeat center/contain;opacity:.13;pointer-events:none}
+.im{aspect-ratio:4/5}
+.mh{height:auto;aspect-ratio:4/5;max-height:62vh;background:var(--bl)}.mh img{object-fit:contain}
+.rf{position:relative;display:grid;gap:20px;background:var(--card);border:1.5px solid #e3c98a;border-radius:28px;padding:18px;box-shadow:0 20px 50px #b83b6b22;margin:10px 0 34px}
+@media(min-width:760px){.rf{grid-template-columns:.9fr 1.1fr;align-items:center;padding:26px}}
+.rfi{border-radius:22px;overflow:hidden}.rfi img{display:block;width:100%;height:auto}
+.bd{position:absolute;top:-14px;right:22px;background:linear-gradient(90deg,#d4af37,#f0d78c);color:#5a3d00;font-weight:700;font-size:.82rem;padding:4px 14px;border-radius:20px;box-shadow:0 4px 12px #d4af3755;z-index:2}
+.rfb h3{font-family:Amiri,serif;font-size:1.7rem;color:var(--dp);margin:0 0 4px}.rfb>p{color:var(--mut);margin:0 0 14px}
+.rf .steps{grid-template-columns:1fr;gap:10px;margin-bottom:16px}
+.rf .s{display:flex;gap:12px;align-items:center;text-align:start;padding:12px}
+.rf .s b{margin:0;flex:0 0 36px;width:36px;height:36px}.rf .s h3{font-family:Cairo,sans-serif;font-size:1rem;margin:0;color:var(--tx)}
+.rf .btn{display:block;text-align:center;margin:0}
+.alone{text-align:center;font-family:Amiri,serif;font-size:1.35rem;color:var(--dp);margin:0 0 16px}
+.rm{background:var(--bl);border-radius:16px;padding:12px;margin:12px 0;font-size:.88rem;color:var(--dp)}.rm a{display:block;margin-top:8px;color:var(--ac);font-weight:700;text-decoration:none}
 </style>
 </head>
 <body>
-<header class="hx"><i class="bo b1"></i><i class="bo b2"></i><div class="w"><nav><span class="lg">Dr. Anji Skincare</span><div><a href="#p">المنتجات</a><a href="#qz">الاختبار</a><a href="#s">الخدمات</a><a href="#a">قصتي</a></div></nav>
+<header class="hx"><i class="bo b1"></i><i class="bo b2"></i><div class="w"><nav><a class="lg" href="#"><img src="logo.png" alt="Dr. Anji Skincare"><span>Dr. Anji Skincare</span></a><div><a href="#p">المنتجات</a><a href="#qz">الاختبار</a><a href="#s">الخدمات</a><a href="#a">قصتي</a></div></nav>
 <div class="hero"><div>
 <span class="tag">تعرّفي على</span>
 <h1>د. انجي نصرة</h1>
@@ -165,14 +207,22 @@ html{background:#fbe3ea}@media (prefers-color-scheme:dark){html{background:#2d1a
 <ul class="cr" style="margin-top:14px"><li>🎓 كلية التجميل والعناية الصحية، جامعة الحواش الخاصة</li><li>🧪 دورات متقدمة في تركيب المستحضرات التجميلية والعلاجية</li></ul>
 <a class="btn" href="#p">اكتشفي المنتجات</a><a class="btn o cons" target="_blank" rel="noopener">احجزي استشارة</a>
 </div><div class="ph fl"><img src="doctor.jpg" alt="د. انجي نصرة"></div></div></div></header>
-<div class="w"><div class="tr"><div>🧪 تركيبات خاصة</div><div>🔍 تحليل بشرة دقيق</div><div>💬 خطة عناية مخصصة</div></div></div>
+<div class="w"><nav class="hl" aria-label="أقسام الموقع">
+<a href="#p"><span><img src="p-spray.jpg" alt=""></span>المنتجات</a>
+<a href="#p"><span><img src="hero.jpg" alt=""></span>الروتين</a>
+<a href="#res" id="hlr"><span><img src="r2-after.jpg" alt=""></span>النتائج</a>
+<a href="#qz"><span><i>✨</i></span>الاختبار</a>
+<a href="#s"><span><img src="work.jpg" alt=""></span>الجلسات</a>
+<a href="#a"><span><img src="doctor.jpg" alt=""></span>قصتي</a>
+</nav></div>
 <section class="alt" id="p"><div class="w"><h2>منتجاتنا</h2><p class="sub">روتين من ثلاث خطوات، ومنتجات إضافية</p>
-<div class="kb"><img src="hero.jpg" alt="روتين Dr. Anji Skincare: غسول وسيروم وكريم"></div>
-<div class="steps">
-<div class="s"><b>1</b><h3>غسول البشرة</h3><p>ينظف بعمق ويزيل الشوائب</p></div>
-<div class="s"><b>2</b><h3>سيروم التغذية</h3><p>يرطب ويغذي بعمق</p></div>
-<div class="s"><b>3</b><h3>كريم الترطيب</h3><p>يشد ويمنح نظارة فائقة</p></div></div>
-<div style="text-align:center;margin:-8px 0 30px"><a class="btn" id="kit" target="_blank" rel="noopener" style="margin:0">اطلبي الروتين كاملاً</a></div>
+<div class="rf"><span class="bd">✨ الأكثر فائدة</span><div class="rfi"><img src="hero.jpg" alt="الروتين المتكامل من Dr. Anji Skincare"></div><div class="rfb">
+<h3>الروتين المتكامل</h3><p>كل منتج بيكمّل التاني، والنتيجة الأفضل لما تستخدميهم سوا.</p>
+<div class="steps"><div class="s"><b>1</b><div><h3>الغسول</h3><p>تنظيف عميق وإزالة الرؤوس السوداء وحب الشباب</p></div></div>
+<div class="s"><b>2</b><div><h3>سيروم النضارة</h3><p>نضارة وترطيب وتوحيد لون</p></div></div>
+<div class="s"><b>3</b><div><h3>كريم الكولاجين</h3><p>شد وتفتيح البشرة</p></div></div></div>
+<a class="btn" id="kit" target="_blank" rel="noopener">اطلبي الروتين كاملاً</a></div></div>
+<p class="alone">أو اختاري منتجاتك منفردة</p>
 <div class="g" id="g"></div></div></section>
 <section id="qz"><div class="w"><h2>محتارة؟ اعرفي روتينك المناسب</h2><p class="sub">ثلاثة أسئلة بسيطة، واقتراح يناسب بشرتك</p><div class="qz" id="qzb"></div></div></section>
 <section class="alt" id="s"><div class="w"><h2>خدماتنا</h2><p class="sub">منظومة متكاملة للعناية بالبشرة</p>
@@ -198,7 +248,8 @@ html{background:#fbe3ea}@media (prefers-color-scheme:dark){html{background:#2d1a
 <section><div class="w"><div class="ct" id="c"><h2>جاهزة تبدئين رحلة بشرتك؟</h2><p class="sub">راسلينا وسنرشح لك الأنسب</p>
 <a class="btn wa" target="_blank" rel="noopener">واتساب</a><a class="btn o ig" target="_blank" rel="noopener" style="background:#fff8">انستغرام</a>
 <div class="inf" id="inf"></div></div></div></section>
-<footer>© Dr. Anji Skincare · المحتوى للتوعية ولا يغني عن استشارة الطبيب</footer>
+<footer><img src="logo-full.png" alt="Dr. Anji Skincare" class="fl2">© Dr. Anji Skincare · المحتوى للتوعية ولا يغني عن استشارة الطبيب</footer>
+<div class="sb" id="sb"><a class="wak" target="_blank" rel="noopener">اطلبي الروتين</a><a class="cons" target="_blank" rel="noopener">احجزي استشارة</a></div>
 <dialog id="md"></dialog>
 <a class="fw wa" target="_blank" rel="noopener" aria-label="واتساب">💬</a>
 
@@ -209,8 +260,8 @@ $(".wa").forEach(a=>a.href=wa());
 $(".ig").forEach(a=>a.href="https://instagram.com/"+INSTAGRAM);
 $(".cons").forEach(a=>a.href=wa("مرحبا، بدي استشارة وتحليل لبشرتي"));
 $(".bk").forEach(a=>a.href=wa("مرحبا، بدي أحجز جلسة (تنظيف بشرة / ميزو مع ديرمابن)"));
-document.getElementById("kit").href=wa("مرحبا، بدي أطلب الروتين المتكامل (غسول + سيروم + كريم)");
-document.getElementById("g").innerHTML=PRODUCTS.map(p=>`<div class="c"><div class="im">${p[4]?`<img src="${p[4]}" alt="${p[0]}" loading="lazy">`:"AN"}</div><div class="b"><h3>${p[0]}</h3><small>${p[1]}</small><p>${p[2]}</p><ul>${p[3].map(x=>`<li>${x}</li>`).join("")}</ul><a href="${wa("مرحبا، بدي أطلب/أسأل عن "+p[0])}" target="_blank" rel="noopener">اطلبي عبر واتساب</a></div></div>`).join("");
+document.getElementById("kit").href=wa("مرحبا، بدي أطلب الروتين المتكامل (الغسول + سيروم النضارة + كريم الكولاجين)");
+document.getElementById("g").innerHTML=PRODUCTS.map(p=>`<div class="c"><div class="im">${p[4]?`<img src="${p[4]}" alt="${p[0]}" loading="lazy">`:"AN"}</div><div class="b"><h3>${p[0]}</h3><small>${p[1]}</small><p>${p[2]}</p><ul>${p[3].map(x=>`<li>${x}</li>`).join("")}</ul><a href="${wa("مرحبا، بدي أطلب/أسأل عن "+p[0])}" target="_blank" rel="noopener">اطلبي المنتج</a></div></div>`).join("");
 if(!SHOW_WORK_PHOTO){const w=document.getElementById("wk");if(w)w.hidden=true}
 if(RESULTS.length){document.getElementById("res").hidden=false;
 document.getElementById("rs").innerHTML=RESULTS.map(r=>`<div><div class="ba" role="slider" tabindex="0" aria-label="مقارنة قبل وبعد" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><img src="${r[0]}" alt="قبل"><img class="bb" src="${r[1]}" alt="بعد"><span class="lb" style="left:10px">قبل</span><span class="lb" style="right:10px">بعد</span><i class="ln"></i></div><p class="cap">${r[2]||""}</p></div>`).join("")}
@@ -218,12 +269,17 @@ document.querySelectorAll(".ba").forEach(b=>{const set=x=>{const r=b.getBounding
 b.addEventListener("pointerdown",e=>{b.setPointerCapture(e.pointerId);set(e.clientX)});
 b.addEventListener("pointermove",e=>{if(b.hasPointerCapture(e.pointerId))set(e.clientX)});
 b.addEventListener("keydown",e=>{let v=+b.getAttribute("aria-valuenow");if(e.key=="ArrowLeft")v-=5;else if(e.key=="ArrowRight")v+=5;else return;v=Math.max(0,Math.min(100,v));b.style.setProperty("--p",v+"%");b.setAttribute("aria-valuenow",v);e.preventDefault()})});
+const sb=document.getElementById("sb");sb.querySelector(".wak").href=wa("مرحبا، بدي أطلب الروتين المتكامل (الغسول + سيروم النضارة + كريم الكولاجين)");
+addEventListener("scroll",()=>sb.classList.toggle("on",scrollY>450),{passive:true});
+if(!RESULTS.length){const h=document.getElementById("hlr");if(h)h.hidden=true}
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){const hx=document.querySelector(".hx");for(let i=0;i<16;i++){const e=document.createElement("i"),s=i%3==0;e.className=s?"sp":"pt";e.style.left=Math.random()*100+"%";e.style.animationDelay=-Math.random()*16+"s";
+if(s){e.style.top=Math.random()*90+"%";e.style.animationDuration=2.5+Math.random()*3+"s"}else{const z=9+Math.random()*10;e.style.width=z+"px";e.style.height=z*0.8+"px";e.style.animationDuration=12+Math.random()*10+"s"}hx.appendChild(e)}}
 const inf=[LOCATION&&"📍 "+LOCATION,HOURS&&"🕒 "+HOURS].filter(Boolean).join(" · ");
 document.getElementById("inf").textContent=inf;
 
 document.documentElement.classList.add("js");
 function openM(i){const p=PRODUCTS[i],d=document.getElementById("md");
-d.innerHTML=`<button class="mx" aria-label="إغلاق" onclick="this.closest('dialog').close()">✕</button><div class="mh">${p[4]?`<img src="${p[4]}" alt="${p[0]}">`:"AN"}</div><div class="mb"><h3>${p[0]}</h3><small>${p[1]}</small><p>${p[2]}</p><ul>${p[3].map(x=>`<li>${x}</li>`).join("")}</ul>${p[5]?`<p><b>طريقة الاستخدام:</b> ${p[5]}</p>`:""}${p[6]?`<p><b>المكونات:</b> ${p[6]}</p>`:""}<a class="btn" style="display:block;text-align:center;margin:10px 0 0" href="${wa("مرحبا، بدي أطلب/أسأل عن "+p[0])}" target="_blank" rel="noopener">اطلبي عبر واتساب</a></div>`;d.showModal()}
+d.innerHTML=`<button class="mx" aria-label="إغلاق" onclick="this.closest('dialog').close()">✕</button><div class="mh">${p[4]?`<img src="${p[4]}" alt="${p[0]}">`:"AN"}</div><div class="mb"><h3>${p[0]}</h3><small>${p[1]}</small><p>${p[2]}</p><ul>${p[3].map(x=>`<li>${x}</li>`).join("")}</ul>${i<3?`<div class="rm">✨ هذا المنتج جزء من <b>الروتين المتكامل</b>، والنتيجة الأفضل لما تستخدميهم سوا.<a href="${wa("مرحبا، بدي أطلب الروتين المتكامل (الغسول + سيروم النضارة + كريم الكولاجين)")}" target="_blank" rel="noopener">اطلبي الروتين كاملاً ←</a></div>`:""}${p[5]?`<p><b>طريقة الاستخدام:</b> ${p[5]}</p>`:""}${p[6]?`<p><b>المكونات:</b> ${p[6]}</p>`:""}<a class="btn" style="display:block;text-align:center;margin:10px 0 0" href="${wa("مرحبا، بدي أطلب/أسأل عن "+p[0])}" target="_blank" rel="noopener">اطلبي عبر واتساب</a></div>`;d.showModal()}
 const md=document.getElementById("md");md.addEventListener("click",e=>{if(e.target===md)md.close()});
 document.querySelectorAll(".c").forEach((c,i)=>c.onclick=e=>{if(!e.target.closest("a"))openM(i)});
 const Q=[["ما نوع بشرتك؟",[["جافة","dry"],["دهنية","oil"],["مختلطة","mix"],["حساسة","sens"]]],["شو أكتر شي بدك تهتمي فيه؟",[["نظارة وإشراقة","glow"],["ترطيب وتغذية","hyd"],["منطقة تحت العين","eye"],["تنظيف البشرة","clean"]]],["كم خطوة بتفضلي بالروتين؟",[["خطوة أو اثنتين بسيطة","min"],["روتين متكامل","full"]]]];
